@@ -52,7 +52,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.tvDates.setText(dates);
         holder.tvDifficulty.setText(trip.getDifficulty());
 
-        // نمنع إعادة تشغيل الـ listener القديم عند إعادة التدوير
         holder.switchFavorite.setOnCheckedChangeListener(null);
         holder.switchFavorite.setChecked(trip.isFavorite());
         holder.switchFavorite.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -60,14 +59,12 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             TripStorage.updateFavorite(context, trip.getId(), isChecked);
         });
 
-        // الضغط على الكارد كله → يفتح التفاصيل
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onTripClick(trip);
             }
         });
 
-        // زر Details يعمل نفس وظيفة الضغط على الكارد
         holder.btnDetails.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onTripClick(trip);
