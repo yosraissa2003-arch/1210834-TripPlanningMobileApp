@@ -1,4 +1,3 @@
-
 package com.example.tripplannerpalestine;
 
 import org.json.JSONException;
@@ -13,11 +12,11 @@ public class Trip {
     private String destination;
     private String startDate;
     private String endDate;
-    private String difficulty;      // Easy / Moderate / Hard
+    private String difficulty;
     private boolean includeHotel;
     private boolean includeMeals;
-    private boolean hasGuide;       // Switch
-    private boolean favorite;       // Mark as favorite
+    private boolean hasGuide;
+    private boolean favorite;
     private String notes;
 
     public Trip() {
@@ -40,7 +39,6 @@ public class Trip {
         this.notes = notes;
     }
 
-    // Getters & Setters
     public String getId() { return id; }
 
     public void setId(String id) { this.id = id; }
@@ -85,7 +83,6 @@ public class Trip {
 
     public void setNotes(String notes) { this.notes = notes; }
 
-    // JSON (for SharedPreferences)
     public JSONObject toJson() throws JSONException {
         JSONObject obj = new JSONObject();
         obj.put("id", id);
