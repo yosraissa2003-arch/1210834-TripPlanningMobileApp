@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trip basic info"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Trip title (e.g., Trip 01 – Jerusalem)"
+            android:layout_marginTop="4dp" />
+
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Destination (Jerusalem, Bethlehem, Jericho...)"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trip dates"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select start date"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#1B5E20"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select end date"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#1B5E20"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Difficulty level"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rgDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbModerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moderate" />
+
+            <RadioButton
+                android:id="@+id/rbHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional services"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <CheckBox
+            android:id="@+id/cbHotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Include hotel booking" />
+
+        <CheckBox
+            android:id="@+id/cbMeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Include meals" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Local guide"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <Switch
+            android:id="@+id/switchGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Provide local guide" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="4"
+            android:maxLines="6"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:overScrollMode="ifContentScrolls"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="4dp"
+            android:hint="Notes or special info (meeting point, expected weather, what to bring…)" />
+
+        <Button
+            android:id="@+id/btnSaveTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Trip"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#1B5E20"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

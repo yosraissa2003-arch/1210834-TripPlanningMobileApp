@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore Palestine with us"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="#1B5E20"
+            android:shadowColor="#AA000100"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="4"/>
+
+
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trip planning app to discover cities, heritage, and nature across Palestine."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp" />
+
+        <ImageView
+            android:id="@+id/ivHero"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_hero_palestine" />
+
+        <TextView
+            android:id="@+id/tvHomeSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start your journey"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp" />
+
+
+        <Button
+            android:id="@+id/btnViewTrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View available trips"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1B5E20"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnStartPlanning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plan a new trip"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#1B5E20"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+</ScrollView>
