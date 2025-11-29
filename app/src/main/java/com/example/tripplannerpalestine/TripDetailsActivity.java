@@ -58,7 +58,6 @@ public class TripDetailsActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Refresh data if edited
         if (trip != null) {
             trip = TripStorage.getTripById(this, trip.getId());
             bindData();
