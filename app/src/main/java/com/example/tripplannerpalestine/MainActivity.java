@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements TripAdapter.OnTri
         adapter = new TripAdapter(this, allTrips, this);
         recyclerView.setAdapter(adapter);
 
-        // Search
         etSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -62,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements TripAdapter.OnTri
             public void afterTextChanged(Editable s) { }
         });
 
-        // Add new trip
         btnAddTrip.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AddEditTripActivity.class);
             startActivity(intent);
@@ -98,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements TripAdapter.OnTri
         super.onResume();
         Log.d(TAG, "onResume");
 
-        // Reload trips when coming back from Add/Edit
         allTrips = TripStorage.getTrips(this);
         filterTrips(etSearch.getText().toString());
     }
