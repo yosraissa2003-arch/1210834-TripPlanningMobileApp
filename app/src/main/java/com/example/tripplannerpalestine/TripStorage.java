@@ -88,7 +88,7 @@ public class TripStorage {
         saveTrips(context, trips);
     }
 
-    // Seed some sample Palestine trips on first run
+  
     public static void ensureSampleData(Context context) {
         SharedPreferences prefs = getPrefs(context);
         boolean seeded = prefs.getBoolean(KEY_SEEDED, false);
